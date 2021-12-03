@@ -2,12 +2,12 @@
 
 ## Ссылки
 
-1. [Главная](https://oaktre.github.io/true-friends/app/)
-2. [Как помочь?](https://oaktre.github.io/true-friends/app/how-help.html)
-3. [Отчеты и документы](https://oaktre.github.io/true-friends/app/documents.html)
-4. [Контакты](https://oaktre.github.io/true-friends/app/contacts.html)
-5. [О нас](https://oaktre.github.io/true-friends/app/about-us.html)
-6. [Фотогалерея](https://oaktre.github.io/true-friends/app/gallery.html)
+1. [Главная](https://oaktre.github.io/true-friends/)
+2. [Как помочь?](https://oaktre.github.io/true-friends/how-help.html)
+3. [Отчеты и документы](https://oaktre.github.io/true-friends/documents.html)
+4. [Контакты](https://oaktre.github.io/true-friends/contacts.html)
+5. [О нас](https://oaktre.github.io/true-friends/about-us.html)
+6. [Фотогалерея](https://oaktre.github.io/true-friends/gallery.html)
 
 
 ## Список команд
