@@ -500,6 +500,108 @@
   transition: max-height var(--main-transition);
 }
 
+.fancybox__backdrop {
+  background: rgba(28,28,28,.3)!important;
+}
+
+.carousel__button.is-next,
+.carousel__button.is-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--color-orange);
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-transition: background-color var(--main-transition);
+  -o-transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition);
+  position: static!important;
+  top: auto!important;
+  left: auto!important;
+  right: auto!important;
+  bottom: auto!important;
+  -webkit-transform: none!important;
+  -ms-transform: none!important;
+  transform: none!important;
+}
+
+.carousel__button.is-next svg,
+.carousel__button.is-prev svg {
+  width: .5rem;
+  height: .9rem;
+  fill: var(--color-white);
+  stroke-width: 1px;
+  stroke-linejoin: unset;
+  stroke-linecap: unset;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.carousel__button.is-next:focus,
+.carousel__button.is-next:hover,
+.carousel__button.is-prev:focus,
+.carousel__button.is-prev:hover {
+  background-color: #e78700;
+}
+
+.carousel__button.is-prev {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.carousel__button.is-next {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.fancybox__nav {
+  position: absolute;
+  bottom: 9rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 6rem;
+}
+
+.fancybox__viewport {
+  height: 100%;
+}
+
+.fancybox__thumbs {
+  display: none;
+}
+
+.fancybox__image {
+  border-radius: 3.2rem;
+  width: 68.7rem!important;
+  height: 64.4rem!important;
+  -o-object-fit: cover!important;
+  object-fit: cover!important;
+  -webkit-transition: width var(--main-transition);
+  -o-transition: width var(--main-transition);
+  transition: width var(--main-transition);
+}
+
 *,
 ::after,
 ::before {
@@ -1420,6 +1522,95 @@ a {
   color: var(--color-white);
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--color-green);
+  margin-top: 6rem;
+}
+
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.pagination__item {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.pagination__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.pagination__link.active::before {
+  opacity: 1;
+}
+
+.pagination__link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-green);
+  border-radius: 50%;
+  opacity: 0;
+  content: "";
+}
+
+.pagination__btn {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.pagination__btn .icon {
+  fill: var(--color-green);
+}
+
 .hero {
   position: relative;
   z-index: 3;
@@ -2192,6 +2383,36 @@ a {
   margin-bottom: 6rem;
 }
 
+.gallery__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12,1fr);
+  gap: 3.2rem;
+}
+
+.gallery__content-item {
+  -ms-grid-column-span: 4;
+  grid-column: 4 span;
+  width: 100%;
+}
+
+.gallery__content-company-life a {
+  -ms-grid-column-span: 3;
+  grid-column: 3 span;
+  width: 100%;
+  height: 27.6rem;
+  display: block;
+}
+
+.gallery__content-company-life a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 3.2rem;
+}
+
 @media screen and (min-width:1199px) {
   .payment-form__radio-btn:hover span {
     color: var(--color-orange);
@@ -2231,6 +2452,11 @@ a {
 }
 
 @media screen and (max-width:1280px) {
+  .fancybox__image {
+    width: 53.4rem!important;
+    height: 53.4rem!important;
+  }
+
   .hero__text {
     max-width: 45rem;
     font-size: 1.8rem;
@@ -2570,6 +2796,17 @@ a {
     width: 100%;
     padding: 2.4rem;
   }
+
+  .gallery__content-item {
+    -ms-grid-column-span: 6;
+    grid-column: 6 span;
+  }
+
+  .gallery__content-company-life a {
+    -ms-grid-column-span: 6;
+    grid-column: 6 span;
+    height: 34.8rem;
+  }
 }
 
 @media screen and (max-width:900px) {
@@ -2651,6 +2888,11 @@ a {
 
   .docs__drop-container {
     display: block;
+  }
+
+  .fancybox__image {
+    width: 28.8rem!important;
+    height: 27rem!important;
   }
 
   body {
@@ -2880,6 +3122,10 @@ a {
     overflow-x: auto;
     margin: 0;
     position: relative;
+  }
+
+  .pagination {
+    margin-top: 4rem;
   }
 
   .hero {
@@ -3224,6 +3470,22 @@ a {
     padding-bottom: 1rem;
   }
 
+  .gallery__content {
+    gap: 0;
+    row-gap: 2.4rem;
+  }
+
+  .gallery__content-item {
+    -ms-grid-column-span: 12;
+    grid-column: 12 span;
+  }
+
+  .gallery__content-company-life a {
+    -ms-grid-column-span: 12;
+    grid-column: 12 span;
+    height: 28.8rem;
+  }
+
   .gallery {
     padding-top: 4rem;
   }
@@ -3272,5 +3534,11 @@ a {
 
   .hero__text::before {
     bottom: calc((100% - 36px) * -1);
+  }
+}
+
+@media screen and (max-width:320px) {
+  html {
+    font-size: 9px;
   }
 }
