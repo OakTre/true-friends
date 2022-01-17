@@ -102,7 +102,7 @@
 
 .logo:focus .logo__text,
 .logo:hover .logo__text {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .social-links {
@@ -363,7 +363,8 @@
   outline: 0;
 }
 
-.input:focus ~ .input-heading {
+.input._active~.input-heading,
+.input:focus~.input-heading {
   top: 35%;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -836,7 +837,7 @@ a {
 
 .header__tel:focus,
 .header__tel:hover {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .header__button {
@@ -945,7 +946,7 @@ a {
 
 .footer__info-text._email:hover,
 .footer__info-text._phone:hover {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .footer__info:nth-last-of-type(1) {
@@ -1146,6 +1147,7 @@ a {
 }
 
 .payment-form__checkbox-wrap {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1163,7 +1165,7 @@ a {
 }
 
 .payment-form__checkbox-label:hover span {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .payment-form__checkbox-label input:checked ~ span {
@@ -1192,6 +1194,7 @@ a {
   -webkit-transition: color var(--main-transition),background-color var(--main-transition),border-color var(--main-transition);
   -o-transition: color var(--main-transition),background-color var(--main-transition),border-color var(--main-transition);
   transition: color var(--main-transition),background-color var(--main-transition),border-color var(--main-transition);
+  pointer-events: none;
 }
 
 .payment-form__input-container {
@@ -1201,6 +1204,11 @@ a {
 
 .payment-form__agree {
   margin-bottom: 1rem;
+}
+
+.payment-form__agree.parsley-error .payment-form__agree-heading,
+.payment-form__agree.parsley-error .payment-form__agree-heading a {
+  color: tomato;
 }
 
 .payment-form__agree:hover .payment-form__agree-heading::before {
@@ -1535,7 +1543,7 @@ a {
 
 .header-nav__info-text._email:hover,
 .header-nav__info-text._phone:hover {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .header-nav__info:nth-last-of-type(1) {
@@ -2112,6 +2120,7 @@ a {
 }
 
 .feautures__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2120,10 +2129,24 @@ a {
   align-items: flex-start;
   margin-bottom: 1.2rem;
   max-width: 90%;
+  padding-left: 2rem;
 }
 
 .feautures__item span {
   display: inline-block;
+}
+
+.feautures__item::before {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url(../img/paw.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .feautures__icon {
@@ -2483,7 +2506,7 @@ a {
 
 .contacts-hero__info-text._email:hover,
 .contacts-hero__info-text._phone:hover {
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 .contacts-hero__social-links {
@@ -2916,7 +2939,7 @@ a {
 
 @media screen and (min-width:1199px) {
   .payment-form__radio-btn:hover span {
-    color: var(--color-orange);
+    color: var(--color-green);
   }
 }
 
@@ -3884,6 +3907,11 @@ a {
 
   .feautures__item {
     margin-bottom: .8rem;
+  }
+
+  .feautures__item::before {
+    width: 1.1rem;
+    height: .9rem;
   }
 
   .feautures__icon {
